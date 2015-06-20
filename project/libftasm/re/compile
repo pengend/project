@@ -1,0 +1,7 @@
+~/.brew/bin/nasm -f macho64 ft_strdup.s
+~/.brew/bin/nasm -f macho64 ft_memalloc.s
+~/.brew/bin/nasm -f macho64 ft_bzero.s
+~/.brew/bin/nasm -f macho64 ft_strlen.s
+~/.brew/bin/nasm -f macho64 ft_strcat.s
+gcc -c *.c -Wall -Werror -Wextra -g
+gcc -o test *.o -Wall -Werror -Wextra -g
