@@ -6,7 +6,7 @@
 /*   By: pxia <pxia@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/06/11 23:42:17 by pxia              #+#    #+#             */
-/*   Updated: 2015/06/12 19:16:51 by pxia             ###   ########.fr       */
+/*   Updated: 2015/06/30 06:48:21 by pxia             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,15 @@
 
 int main()
 {
-//	char t[10];
+	char t1[2];
+	int fd = open("main.c", O_RDONLY);
+	char buf[9];
 
-	char *s = (char*)ft_memalloc(10);
-	char *s1 = "asdfg";
-
-	ft_memcpy(s, s1, ft_strlen(s1));
-	printf("%s\n", s);
-	/*char t1[2];
-//	int fd = open("main.c", O_RDONLY);
-	
+	ft_bzero(buf, 9);
+	ft_strcat(buf, "Ba");
+	ft_strcat(buf, "j");
+	ft_strcat(buf, "our.");
+	printf("%s\n", buf);
 	t1[0] = '1';
 	t1[1] = '\0';
 	printf("bzero test : %s\n", t1);
@@ -42,15 +41,10 @@ int main()
 	printf("tolower test : A %c Z %c a %c ~ %c\n", ft_tolower('A'), ft_tolower('Z'), ft_tolower('a'), ft_tolower('~'));
 	printf("toupper test : a %c z %c A %c ~ %c\n", ft_toupper('a'), ft_toupper('z'), ft_toupper('A'), ft_toupper('~'));
 	ft_puts("Hello World");
-	ft_strdup(10);
-//	ft_puts(NULL);
-//	puts(NULL);
-//	ft_puts("asd");
-//	ft_cat(fd);
-//	ft_puts(ft_strchr("abcdefg\0", 'c'));
+	ft_puts("aaa\n(null)\n");
+	ft_puts("aaa");
+	ft_puts(NULL);
+	ft_cat(fd);
 
-//	ft_puts(s);
-//	ft_memset(s, 'a', ft_strlen(s));
-*/
 	return (0);
 }
